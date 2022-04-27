@@ -5,10 +5,11 @@
   font-family: "Roboto", serif;
 }
 .cardImg {
-  height: 65%;
+  height: 60%;
 }
 .cardImg img {
   height: 100%;
+  width: 100%;
 }
 .content {
   padding: 10px 8px;
