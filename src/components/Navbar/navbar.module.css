@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: "Roboto", serif;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.navbar {
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 8%;
+  padding: 1rem;
+}
+.brand {
+  font-family: "Fugaz One", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.search {
+  display: flex;
+  padding: 0.5rem;
+  border: 0.1rem solid var(--color-border-hover);
+  background-color: var(--color-blue);
+  border-radius: 30px;
+}
+.search input {
+  border: none;
+  width: 100%;
+  color: var(--color-accent);
+  outline: none;
+  background-color: transparent;
+}
+.search button {
+  font-size: 0.9rem;
+  margin: 0 0.5rem;
+  border: none;
+  background-color: var(--color-blue);
+  cursor: pointer;
+}
+.search i {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+.search:focus {
+  outline: none;
+}
+.navItems {
+  display: flex;
+}
+.btn {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border: 0.5px solid var(--color-border-hover);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-accent);
+}
+/* MEDIA QUERIES */
+@media (max-width: 540px) {
+  .search {
+    display: none;
+  }
+}
