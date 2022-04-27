@@ -1,7 +1,7 @@
 .CardContainer {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 3fr));
   padding: 2rem;
   margin: 7rem 0 3rem 18rem;
   gap: 2rem;
