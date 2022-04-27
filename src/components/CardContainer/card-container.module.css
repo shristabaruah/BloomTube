@@ -1,8 +1,8 @@
 .CardContainer {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 7rem 0 3rem 14rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 2rem;
+  margin: 7rem 0 3rem 18rem;
   gap: 2rem;
 }

@@ -34,6 +34,7 @@
   overflow: hidden;
   color: var(--color-accent);
   margin-left: 1rem;
+  width: 200px;
 }
 .videoInfo h5 {
   margin: 6px 0 4px;

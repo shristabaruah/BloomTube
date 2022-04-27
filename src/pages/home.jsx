@@ -12,6 +12,8 @@ const Home = () => {
         <VideoCard />
         <VideoCard />
         <VideoCard />
+        <VideoCard />
+
       </CardContainer>
     </div>
   );

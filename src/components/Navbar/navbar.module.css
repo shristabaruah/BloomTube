@@ -10,7 +10,7 @@ header {
   z-index: 10;
 }
 .navbar {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1300px;
   width: 100%;
   display: flex;
