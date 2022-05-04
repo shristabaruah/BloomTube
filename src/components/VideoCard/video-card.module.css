@@ -1,0 +1,48 @@
+.card {
+  max-width: 20rem;
+  height: 15.4rem;
+  cursor: pointer;
+  font-family: "Roboto", serif;
+}
+.cardImg {
+  height: 60%;
+}
+.cardImg img {
+  height: 100%;
+  width: 100%;
+}
+.content {
+  padding: 10px 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.content img {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.videoInfo {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.videoInfo h4 {
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--color-accent);
+  margin-left: 1rem;
+  width: 200px;
+}
+.videoInfo h5 {
+  margin: 6px 0 4px;
+}
+.videoInfo h5,
+.videoInfo span {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  color: var(--color-accent);
+}
