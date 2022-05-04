@@ -1,8 +1,7 @@
 .sidebar {
   position: fixed;
   height: 100%;
-  width: 17%;
-  background-color: var(--color-primary);
+  width: 12rem;
   top: 4.7rem;
   color: var(--color-white);
 }
@@ -20,5 +19,27 @@
   padding-right: 0.5rem;
 }
 .sidebar li:hover {
-  background-color: var(--color-blue);
+  border-left: 2px solid var(--color-accent);
+}
+.sidebar a {
+  display: block;
+  padding: 4px 0;
+  color: var(--color-white);
+  transition: color 0.2s ease-in;
+}
+.sidebar a:hover {
+  color: var(--color-white);
+  transition: color 0.2s ease-in;
+}
+.sidebar a:active {
+  opacity: 0.5;
+}
+@media only screen and (max-width: 840px) {
+  .sidebar {
+    width: 4.4rem;
+    transition: width 0.2s ease-in;
+  }
+  .sidebar span {
+    display: none;
+  }
 }

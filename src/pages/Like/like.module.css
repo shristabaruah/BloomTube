@@ -1,0 +1,14 @@
+.like_container {
+  display: flex;
+  width: calc(100% - 16.8rem);
+}
+@media only screen and (max-width: 1024px) {
+  .like_container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .like_container {
+    width: calc(100% - 8rem);
+  }
+}

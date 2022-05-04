@@ -1,0 +1,14 @@
+.card_wrapper {
+  margin-left: 1.2rem;
+  width: calc(100% - 30rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+  .card_wrapper {
+    margin: 0;
+    width: 100%;
+  }
+}

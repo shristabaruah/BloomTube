@@ -1,0 +1,15 @@
+.playlist_container {
+  display: flex;
+  width: calc(100% - 16.8rem);
+}
+
+@media only screen and (max-width: 1024px) {
+  .playlist_container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .playlist_container {
+    width: calc(100% - 8rem);
+  }
+}

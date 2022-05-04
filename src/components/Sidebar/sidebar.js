@@ -1,36 +1,41 @@
 import styles from "./sidebar.module.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <section className={styles.sidebar}>
-      <div className={`sidebar${styles.active}`}>
-        <ul>
-          <li>
-            <i className="fa-solid fa-house"></i>
-            <span>Home</span>
-          </li>
-          <li>
+      <ul>
+        <li>
+          <Link to="/" title="Explore">
             <i class="fa-solid fa-compass"></i>
             <span>Explore</span>
-          </li>
-          <li>
+          </Link>
+        </li>
+        <li>
+          <Link to="/playlist" title="playlist">
             <i class="fa-solid fa-list"></i>
             <span>Playlist</span>
-          </li>
-          <li>
+          </Link>
+        </li>
+        <li>
+          <Link to="/watchLater" title="Watch Later">
             <i class="fa-solid fa-clock"></i>
             <span>Watch Later</span>
-          </li>
-          <li>
+          </Link>
+        </li>
+        <li>
+          <Link to="/like" title="Like">
             <i class="fa-solid fa-thumbs-up"></i>
             <span>Liked</span>
-          </li>
-          <li>
+          </Link>
+        </li>
+        <li>
+          <Link to="/history" title="History">
             <i class="fa-solid fa-clock-rotate-left"></i>
             <span>History</span>
-          </li>
-        </ul>
-      </div>
+          </Link>
+        </li>
+      </ul>
     </section>
   );
 };

@@ -1,24 +1,53 @@
-:root{
-  --color-primary:#041441;
-  --color-secondary:#54595F;
-  --color-border-hover:#22b2ee;
-  --color-blue:#052b77;
-  --color-dark-blue:rgb(2, 25, 73);
-  --color-text:#7A7A7A;
-  --color-accent:#61CE70;
-  --color-white:#FFF;
-  --color-black:#000;
-
+:root {
+  --color-primary: #041441e0;
+  --color-secondary: #051525a2;
+  --color-border-hover: #22b2ee;
+  --color-blue: #052b77;
+  --color-dark-blue: #1d366d;
+  --color-blue-bell: #1f124b;
+  --color-text: #7a7a7a;
+  --color-cadet: #5d737e;
+  --color-accent: #61ce70;
+  --color-white: #fff;
+  --color-quick-silver: #9da3a4;
+  --color-black: #000;
+  --color-orange-red: #f26430;
 }
 /* reset css */
-*{
+* {
   box-sizing: border-box;
   padding: 0;
-  margin: 0; 
+  margin: 0;
 }
-ul,li{
+ul,
+li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
+}
+body {
+  background: rgb(4, 20, 65);
+  background: linear-gradient(
+    176deg,
+    rgba(4, 20, 65, 1) 0%,
+    rgba(4, 20, 66, 1) 26%,
+    rgba(6, 95, 181, 0.9780287114845938) 100%
+  );
+  color: var(--color-white);
+}
+.body_style {
+  margin: 7rem 3rem 3rem 13rem;
+  transition: margin 0.2s ease-in;
+}
+@media only screen and (max-width: 1600px) {
+  .body_style {
+    margin-left: 13rem;
+    transition: margin 0.2s ease-in;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .body_style {
+    margin-left: 11rem;
+  }
 }
