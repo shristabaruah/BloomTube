@@ -3,6 +3,7 @@
   height: 15.4rem;
   cursor: pointer;
   font-family: "Roboto", serif;
+  position: relative;
 }
 .cardImg {
   height: 60%;
@@ -32,7 +33,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: var(--color-accent);
+  color: var(--color-white);
   margin-left: 1rem;
   width: 200px;
 }
@@ -44,5 +45,15 @@
   font-size: 1rem;
   font-weight: 400;
   padding-left: 1rem;
-  color: var(--color-accent);
+  color: var(--color-white);
+}
+.cardImg span {
+  position: absolute;
+  top: 6rem;
+  right: 8px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  padding: 4px 8px;
 }

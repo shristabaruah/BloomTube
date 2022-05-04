@@ -15,7 +15,9 @@ const Navbar = () => {
         </div>
         <ul className={styles.naviItems}>
           <li>
+            <Link to="/login" title="lpgin">
             <button className={styles.btn}>LogIn</button>
+            </Link>
           </li>
         </ul>
       </nav>

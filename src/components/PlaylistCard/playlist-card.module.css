@@ -1,0 +1,47 @@
+.playlist {
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  max-width: 38rem;
+  align-items: center;
+  cursor: pointer;
+
+  margin: 7rem 0 1rem 18rem;
+}
+.descp h5,
+.title {
+  font-weight: 500;
+  line-height: normal;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  gap: 5rem;
+  white-space: nowrap;
+  margin-bottom: 1.6rem;
+}
+.image_container {
+  width: 23%;
+  height: 100%;
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.delete {
+  width: 25%;
+  position: absolute;
+  background-color: var(--color-secondary);
+  outline: none;
+  border: none;
+  color: var(--color-white);
+  top: 5px;
+  right: 10px;
+}
+
+.delete i {
+  font-size: 2rem;
+}
