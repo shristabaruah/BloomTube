@@ -6,3 +6,4 @@ export { HorizontalCard } from "./HorizontalCard/horizontal-card";
 export { CardWrapper }  from "./CardWrapper/card-wrapper";
 export { PageInfo } from "./PageInfo/page-info";
 export { PlaylistCard } from "./PlaylistCard/playlist-card";
+export { RequiresAuth } from "./authComponent/RequiresAuth";
