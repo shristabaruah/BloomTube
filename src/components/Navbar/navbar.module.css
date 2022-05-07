@@ -53,14 +53,17 @@ header {
 .search:focus {
   outline: none;
 }
-.navItems {
+nav ul {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .btn {
   position: relative;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
   border-radius: 30px;
   color: var(--color-white);
   background-color: var(--color-blue);
@@ -74,5 +77,8 @@ header {
 @media (max-width: 540px) {
   .search {
     display: none;
+  }
+  header {
+    flex-wrap: wrap;
   }
 }
