@@ -10,6 +10,7 @@ export const videos = [
     description:
       "Unboxing every Google Pixel 3 and Pixel 3 XL. The newly announced Google Pixel 3 XL and Google Pixel 3 are Google’s follow up to last year’s Pixel lineup. The Pixel series has built a following within the tech community and the new Pixel 3 hopes to continue that trend. Will stock android and some sophisticated camera software make the Pixel 3 XL and Pixel 3 worth the price tag. Subscribe for my Pixel 3 XL review.",
     channel: "Unbox Therapy",
+    likes:"32k",
     category: "Smartphone",
     duration: "14:49",
     views: "3.5M",
@@ -22,6 +23,7 @@ export const videos = [
     title: "Apple is gonna LOVE this one...",
     description: "Is the Samsung M8 the ultimate 'Smart Monitor'?",
     channel: "Unbox Therapy",
+    likes:"22k",
     category: "Monitor",
     duration: "21:14",
     views: "660k",
@@ -36,6 +38,7 @@ export const videos = [
     description:
       "Samsung Galaxy S22, Samsung Galaxy S22+ and Samsung Galaxy S22 Ultra unboxing and hands on. ",
     channel: "Unbox Therapy",
+    likes:"12k",
     category: "Smartphone",
     duration: "31:13",
     views: "2.3M",
@@ -48,6 +51,7 @@ export const videos = [
     title: "Galaxy Tab S8 Ultra: A Monster Tablet!",
     description: "Megatablet. Hypertablet. Monster tablet. S8 Ultra",
     channel: "Marques Browniee",
+    likes:"72k",
     category: "Smartphone",
     duration: "11:33",
     views: "3.9M",
@@ -60,6 +64,7 @@ export const videos = [
     title: "The Apple Studio Display is a Bad Deal",
     description: "Apple's Studio Display is quite an oddball in 2022...",
     channel: "Marques Browniee",
+    likes:"62k",
     category: "Monitor",
     duration: "12:17",
     views: "3.5M",
@@ -72,6 +77,7 @@ export const videos = [
     title: "OnePlus 10 Pro Impressions: What Happened?",
     description: "OnePlus 10 Pro is out... kinda",
     channel: "Marques Browniee",
+    likes:"32k",
     category: "Smartphone",
     duration: "13:31",
     views: "3.4M",
@@ -85,6 +91,7 @@ export const videos = [
     description:
       "Samsung’s new QD-OLED TV promises stunning picture quality that could surpass LG’s best TVs, and the 2022 edition of The Frame has a new matte display that makes artwork look even more real on your wall. Here are the details on Samsung’s best TVs this year.",
     channel: "The Verge",
+    likes:"52k",
     category: "Television",
     duration: "08:01",
     views: "186k",
@@ -98,6 +105,7 @@ export const videos = [
     description:
       "The LG C2 OLED is the latest successor to a long line of one of the most popular TVs you could buy for the past decade. In this review, we'll talk about what's new,  how the LG C2 OLED picture quality stacks up against the tougher competition in 2022, and what picture settings can affect the viewing experience. ",
     channel: "Digital Trends",
+    likes:"39k",
     category: "Television",
     duration: "14:54",
     views: "164k",
@@ -112,6 +120,7 @@ export const videos = [
     description:
       "If you could get a 55 OLED display for hundreds of dollars cheaper than usual, would you buy one? Should you buy one? We took the plunge for you and bought the Skyworth 55XC9000, come check out the results!",
     channel: "Linus Tech Tips",
+    likes:"62k",
     category: "Television",
     duration: "14:57",
     views: "2M",
@@ -125,6 +134,7 @@ export const videos = [
     description:
       "The Sony X95K is Sony's flagship 4K LED/LCD TV for 2022 and part of Sony's first wave of mini-LED backlit TVs.",
     channel: "Digital Trends",
+    likes:"42k",
     category: "Television",
     duration: "15:09",
     views: "190k",
@@ -138,6 +148,7 @@ export const videos = [
     description:
       "I hope you didn’t just buy a new monitor, because Dell Alienware’s new QD-OLED AW3423DW is HERE and it’s giving everything else in this price range a serious run for its money. It's high refresh rate (175Hz) , GSYNC HDR, and OLED. Have we achieved a zero-compromises monitor?!",
     channel: "Linux Tech Tips",
+    likes:"32k",
     category: "Monitor",
     duration: "16:07",
     views: "1.6M",
@@ -152,6 +163,7 @@ export const videos = [
     description:
       "LG's latest monitor, the DualUp, is exciting. It has an aspect ratio of 16:18 or 8:9, which is 2560 x 2880, effectively two 1440p monitors stacked on top of each other. So it's basically a vertical monitor, which might make you cringe at first, but after using it, we love it!",
     channel: "ShortCicuit",
+    likes:"82k",
     category: "Monitor",
     duration: "9:59",
     views: "725k",

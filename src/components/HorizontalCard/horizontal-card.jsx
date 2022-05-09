@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuth, useLike } from "../../Contexts";
 import { removeFromLikesHandler } from "../../utils/like";
 import styles from "./horizontal-card.module.css";
-const HorizontalCard = ({ title, channel, thumbnail, _id }) => {
+const HorizontalCard = ({ title, channel, thumbnail, _id,duration }) => {
   const {
     authState: { token },
   } = useAuth();
@@ -27,7 +27,7 @@ const HorizontalCard = ({ title, channel, thumbnail, _id }) => {
       )}
       <div className={styles.video_container}>
         <img src={thumbnail} alt="placeholder" className="responsive-img" />
-        <span>13:00</span>
+        <span>{duration}</span>
       </div>
       <div className={styles.content}>
         <h4 className={styles.title}>{title}</h4>
