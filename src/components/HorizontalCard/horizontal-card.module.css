@@ -49,3 +49,24 @@
   color: var(--color-white);
   font-size: 1rem;
 }
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 1.5rem;
+  transform-origin: top right;
+  transition: transform 0.2s ease-in;
+  z-index: 1;
+}
+.menu button {
+  background-color: var(--color-accent);
+  text-align: left;
+  font-family: "Roboto", serif;
+  padding: 8px;
+  display: block;
+  margin: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}

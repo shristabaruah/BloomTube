@@ -16,6 +16,8 @@
   padding: 10px 8px;
   display: flex;
   align-items: flex-start;
+  background-color: var(--color-cadet);
+  border-width: 0px 2px 2px 2px;
 }
 .content img {
   width: 4rem;
@@ -33,9 +35,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: var(--color-white);
   margin-left: 1rem;
-  width: 200px;
+  width: 170px;
 }
 .videoInfo h5 {
   margin: 6px 0 4px;
@@ -45,7 +46,6 @@
   font-size: 1rem;
   font-weight: 400;
   padding-left: 1rem;
-  color: var(--color-white);
 }
 .cardImg span {
   position: absolute;
@@ -56,4 +56,38 @@
   background-color: var(--color-accent);
   color: var(--color-black);
   padding: 4px 8px;
+}
+.options {
+  color: var(--color-white);
+  outline: none;
+  border: none;
+  background-color: inherit;
+  margin-left: 1.6rem;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.options:hover {
+  color: var(--color-accent);
+}
+.menu {
+  position: absolute;
+  display: flex;
+  right: 1.2rem;
+  flex-direction: column;
+  transform-origin: top right;
+  transition: transform 0.2s ease-in;
+  z-index: 1;
+}
+.menu button {
+  background-color: var(--color-accent);
+  text-align: left;
+  font-family: "Roboto", serif;
+}
+.menu .active {
+  translate: (1);
+}
+.menu button:hover {
+  opacity: 1;
+  color: var(--color-blue);
 }
