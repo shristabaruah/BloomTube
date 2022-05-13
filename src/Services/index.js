@@ -4,3 +4,8 @@ export { LoginService } from "./authServices/loginService";
 export { addToLikeService } from "./likesServices/addToLikeService";
 export { getLikeService } from "./likesServices/getLikeService";
 export { removeFromLikeService } from "./likesServices/removeFromLikeService";
+export { getSingleVideo } from "./getSingleVideo";
+export {getHistoryService} from "./historyServices/getHistoryService";
+export {deleteHistoryService} from "./historyServices/deleteAllHistoryService";
+export {addToHistoryService} from "./historyServices/addToHistoryServices";
+export {removeHistoryService} from "./historyServices/removeHistory";

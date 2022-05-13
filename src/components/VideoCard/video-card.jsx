@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth, useLike } from "../../Contexts";
 import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
 import styles from "./video-card.module.css";
@@ -7,7 +7,7 @@ import styles from "./video-card.module.css";
 const VideoCard = ({
   _id,
   title,
-  likes: videoLikes,
+  likes,
   channel,
   duration,
   views,
@@ -40,12 +40,14 @@ const VideoCard = ({
     }
   };
 
+ 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} >
+      <Link to={`/videoPlay/${_id}`}>
       <div className={styles.cardImg}>
         <img src={thumbnail} alt={title} className="responsive-img" />
         <span>{duration}</span>
-      </div>
+      </div></Link>
       <div className={styles.content}>
         {isVisible && (
           <div className={styles.menu}>
@@ -73,7 +75,7 @@ const VideoCard = ({
           <h5 title="title">{channel}</h5>
           <div>
             <span>{views} views</span>
-            <span>{videoLikes} Likes</span>
+            <span>{likes} Likes</span>
           </div>
         </div>
         <button className={styles.options} onClick={optionsHandler}>

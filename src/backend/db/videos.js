@@ -13,6 +13,7 @@ export const videos = [
     category: "Smartphone",
     duration: "14:49",
     views: "3.5M",
+    likes:"23k",
     thumbnail: "http://i3.ytimg.com/vi/BJrsmM6aEYE/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLQf2e6s9_FvCfjFM14z_q7LUwlu5J7sUaBak7VtPw=s48-c-k-c0x00ffffff-no-rj",
@@ -25,6 +26,7 @@ export const videos = [
     category: "Monitor",
     duration: "21:14",
     views: "660k",
+    likes:"3k",
     thumbnail: "http://i3.ytimg.com/vi/pa2J3liXvuA/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLQf2e6s9_FvCfjFM14z_q7LUwlu5J7sUaBak7VtPw=s48-c-k-c0x00ffffff-no-rj",
@@ -39,6 +41,7 @@ export const videos = [
     category: "Smartphone",
     duration: "31:13",
     views: "2.3M",
+    likes:"13k",
     thumbnail: "http://i3.ytimg.com/vi/OlapSPEs5YI/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLQf2e6s9_FvCfjFM14z_q7LUwlu5J7sUaBak7VtPw=s48-c-k-c0x00ffffff-no-rj",
@@ -51,6 +54,7 @@ export const videos = [
     category: "Smartphone",
     duration: "11:33",
     views: "3.9M",
+    likes:"10k",
     thumbnail: "http://i3.ytimg.com/vi/bTYV7aFC6KE/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s48-c-k-c0x00ffffff-no-rj",
@@ -63,6 +67,7 @@ export const videos = [
     category: "Monitor",
     duration: "12:17",
     views: "3.5M",
+    likes:"18k",
     thumbnail: "http://i3.ytimg.com/vi/yoigsHYc77s/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s48-c-k-c0x00ffffff-no-rj",
@@ -75,6 +80,7 @@ export const videos = [
     category: "Smartphone",
     duration: "13:31",
     views: "3.4M",
+    likes:"32k",
     thumbnail: "http://i3.ytimg.com/vi/7IaYSxDp88s/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s48-c-k-c0x00ffffff-no-rj",
@@ -88,6 +94,7 @@ export const videos = [
     category: "Television",
     duration: "08:01",
     views: "186k",
+    likes:"11k",
     thumbnail: "http://i3.ytimg.com/vi/9XdS9sShG5Q/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLRpFE1CqrF0kiUvimY9XzgPQMVzy-il9l9janS0Kes=s48-c-k-c0x00ffffff-no-rj",
@@ -101,6 +108,7 @@ export const videos = [
     category: "Television",
     duration: "14:54",
     views: "164k",
+    likes:"43k",
     thumbnail: "http://i3.ytimg.com/vi/9XdS9sShG5Q/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLS_m1TiB_kjNfxtfnqyWfpfaw1qHHT4whV4Hy2-mg=s48-c-k-c0x00ffffff-no-rj",
@@ -115,6 +123,7 @@ export const videos = [
     category: "Television",
     duration: "14:57",
     views: "2M",
+    likes:"28k",
     thumbnail: "http://i3.ytimg.com/vi/yx7daXdbDsI/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLSZnNA3eg_fDwUgsCxpqMnVWu3UGo-Rln4621ncIQ=s48-c-k-c0x00ffffff-no-rj",
@@ -128,6 +137,7 @@ export const videos = [
     category: "Television",
     duration: "15:09",
     views: "190k",
+    likes:"17k",
     thumbnail: "http://i3.ytimg.com/vi/2GURVhh9ZQ4/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLS_m1TiB_kjNfxtfnqyWfpfaw1qHHT4whV4Hy2-mg=s48-c-k-c0x00ffffff-no-rj",
@@ -141,6 +151,7 @@ export const videos = [
     category: "Monitor",
     duration: "16:07",
     views: "1.6M",
+    likes:"15k",
     thumbnail: "http://i3.ytimg.com/vi/65SvTs_b3RE/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLSZnNA3eg_fDwUgsCxpqMnVWu3UGo-Rln4621ncIQ=s48-c-k-c0x00ffffff-no-rj",
@@ -155,6 +166,7 @@ export const videos = [
     category: "Monitor",
     duration: "9:59",
     views: "725k",
+    likes:"18k",
     thumbnail: "http://i3.ytimg.com/vi/b4S5ruT_xX4/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLSbGLL5fOH4D-lYPry9TnHKa1jU44nkelowypsl=s48-c-k-c0x00ffffff-no-rj",

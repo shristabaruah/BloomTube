@@ -6,11 +6,12 @@
   padding: 1.6rem;
   background-color: var(--color-secondary);
   position: relative;
-  cursor: pointer;
   align-items: flex-start;
 }
 .video_container {
   position: relative;
+  cursor: pointer;
+
 }
 .video_container img {
   height: 4.6rem;
@@ -53,7 +54,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  right: 1.5rem;
+  right: 2rem;
   transform-origin: top right;
   transition: transform 0.2s ease-in;
   z-index: 1;
