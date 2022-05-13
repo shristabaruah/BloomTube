@@ -4,7 +4,9 @@ import { useAuth, useHistory, useLike } from "../../Contexts";
 import { removeHistory } from "../../utils/history";
 import { removeFromLikesHandler } from "../../utils/like";
 import styles from "./horizontal-card.module.css";
-const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
+
+const HorizontalCard = ({ title, channel, thumbnail, _id,duration }) => {
+
   const {
     authState: { token },
   } = useAuth();
@@ -39,12 +41,14 @@ const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
           </button>
         </div>
       )}
+
       <Link to={`/videoPlay/${_id}`}>
         <div className={styles.video_container}>
           <img src={thumbnail} alt="placeholder" className="responsive-img" />
           <span>{duration}</span>
         </div>
       </Link>
+
       <div className={styles.content}>
         <h4 className={styles.title}>{title}</h4>
         <h5>{channel}</h5>
