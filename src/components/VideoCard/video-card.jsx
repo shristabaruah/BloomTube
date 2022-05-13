@@ -40,14 +40,14 @@ const VideoCard = ({
     }
   };
 
+ 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} >
       <Link to={`/videoPlay/${_id}`}>
-        <div className={styles.cardImg}>
-          <img src={thumbnail} alt={title} className="responsive-img" />
-          <span>{duration}</span>
-        </div>
-      </Link>
+      <div className={styles.cardImg}>
+        <img src={thumbnail} alt={title} className="responsive-img" />
+        <span>{duration}</span>
+      </div></Link>
       <div className={styles.content}>
         {isVisible && (
           <div className={styles.menu}>

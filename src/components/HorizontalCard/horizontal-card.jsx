@@ -33,12 +33,7 @@ const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
     <article className={styles.card_container}>
       {isVisible && (
         <div className={styles.menu}>
-          <button
-            onClick={() => {
-              removeAction(_id);
-              setIsVisible(false);
-            }}
-          >
+          <button onClick={() =>{ removeAction(_id);  setIsVisible(false);}}>
             <i class="fa-solid fa-trash-can"></i>
             Remove
           </button>

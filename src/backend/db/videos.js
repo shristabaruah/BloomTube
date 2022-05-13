@@ -41,7 +41,7 @@ export const videos = [
     category: "Smartphone",
     duration: "31:13",
     views: "2.3M",
-    likes: "13k",
+    likes: "12k",
     thumbnail: "http://i3.ytimg.com/vi/OlapSPEs5YI/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLQf2e6s9_FvCfjFM14z_q7LUwlu5J7sUaBak7VtPw=s48-c-k-c0x00ffffff-no-rj",
@@ -166,7 +166,7 @@ export const videos = [
     category: "Monitor",
     duration: "9:59",
     views: "725k",
-    likes: "18k",
+    likes: "22k",
     thumbnail: "http://i3.ytimg.com/vi/b4S5ruT_xX4/hqdefault.jpg",
     channelAvatar:
       "https://yt3.ggpht.com/ytc/AKedOLSbGLL5fOH4D-lYPry9TnHKa1jU44nkelowypsl=s48-c-k-c0x00ffffff-no-rj",

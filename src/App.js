@@ -36,7 +36,7 @@ function App() {
 
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
@@ -71,7 +71,7 @@ function App() {
             </RequiresAuth>
           }
         />
-        <Route path="/videoPlay/:videoId" element={<SingleVideo />} />
+        <Route path="/videoPlay/:videoId" element={<SingleVideo/>}/>
       </Routes>
     </>
   );

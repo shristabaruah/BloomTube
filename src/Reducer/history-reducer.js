@@ -13,4 +13,4 @@ const historyReducer = (state, action) => {
   }
 };
 
-export { historyReducer };
+export { historyReducer }
