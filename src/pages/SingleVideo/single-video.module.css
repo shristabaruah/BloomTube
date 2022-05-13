@@ -1,0 +1,87 @@
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--color-blue);
+}
+.video_wrapper{
+    width: 95%;
+    max-width: 90rem;
+    
+}
+.detail_container > h4{
+    margin-top: 1rem ;
+	font-weight: 500;
+    font-size: 1.2rem;
+}
+.video_details >span{
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+.video_details{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    font-size: 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-accent);
+}
+.btn_container button{
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+button > i{
+    margin-right: 3px;
+}
+.channel_info{
+    margin: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+}
+.channel_info img{
+    height: 4rem;
+    width: 4rem;
+}
+.channel_detail{
+    margin-left:1rem ;
+}
+.channel_detail > h4{
+    margin-top:15px ;
+    font-weight: 500;
+}
+.descp{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.option{
+    display: none;
+    background-color: inherit;
+    border: none;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 754px) {
+.option{
+    display: block;
+}
+.btn_container{
+    display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 3rem;
+        right: 0;
+		padding: 8px;
+		background-color: var(--color-cadet);
+		z-index: 1;
+}
+.btn_container > button{
+    text-align: left;
+    font-size: 0.8rem;
+}
+.active{
+    display: flex;
+}
+}

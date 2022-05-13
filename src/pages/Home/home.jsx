@@ -10,7 +10,7 @@ const Home = () => {
     getVideo(setVideo);
   }, []);
   return (
-    <div className={`body_style ${styles.home}`}>
+    <div className={styles.home}>
       <CardContainer>
         {videos.length > 0
           ? videos.map((video) => (

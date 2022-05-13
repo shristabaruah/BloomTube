@@ -5,3 +5,4 @@ export { LikePage } from "./Like/like";
 export { HistoryPage } from "./History/history";
 export { WatchLater } from "./WatchLater/watch-later";
 export { Playlist } from "./SinglePlaylist/playlist";
+export { SingleVideo } from "./SingleVideo/single-video"; 

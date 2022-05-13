@@ -8,6 +8,7 @@ import {
   Login,
   Playlist,
   SignUp,
+  SingleVideo,
   WatchLater,
 } from "./pages";
 import { ToastContainer } from "react-toastify";
@@ -70,6 +71,7 @@ function App() {
             </RequiresAuth>
           }
         />
+        <Route path="/videoPlay/:videoId" element={<SingleVideo />} />
       </Routes>
     </>
   );
