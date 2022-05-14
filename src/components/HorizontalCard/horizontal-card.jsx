@@ -1,23 +1,27 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useAuth, useHistory, useLike } from "../../Contexts";
+import { useAuth, useHistory, useLike, useWatchLater } from "../../Contexts";
 import { removeHistory } from "../../utils/history";
 import { removeFromLikesHandler } from "../../utils/like";
+import { removeFromWatchLater } from "../../utils/watchLater";
 import styles from "./horizontal-card.module.css";
 
-const HorizontalCard = ({ title, channel, thumbnail, _id,duration }) => {
-
+const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
   const {
     authState: { token },
   } = useAuth();
 
-  const { likeDispatch } = useLike();
   const [isVisible, setIsVisible] = useState(false);
+
+  const optionHandler = () => setIsVisible((prev) => !prev);
+
   let location = useLocation();
+
+  const { likeDispatch } = useLike();
 
   const { historyDispatch } = useHistory();
 
-  const optionHandler = () => setIsVisible((prev) => !prev);
+  const { watchLaterDispatch } = useWatchLater();
 
   const removeAction = () => {
     switch (location.pathname) {
@@ -27,6 +31,9 @@ const HorizontalCard = ({ title, channel, thumbnail, _id,duration }) => {
       case "/history":
         removeHistory(_id, token, historyDispatch);
         break;
+      case "/watchLater":
+        removeFromWatchLater(_id, token, watchLaterDispatch);
+        break;
       default:
         break;
     }
@@ -35,7 +42,12 @@ const HorizontalCard = ({ title, channel, thumbnail, _id,duration }) => {
     <article className={styles.card_container}>
       {isVisible && (
         <div className={styles.menu}>
-          <button onClick={() =>{ removeAction(_id);  setIsVisible(false);}}>
+          <button
+            onClick={() => {
+              removeAction(_id);
+              setIsVisible(false);
+            }}
+          >
             <i class="fa-solid fa-trash-can"></i>
             Remove
           </button>

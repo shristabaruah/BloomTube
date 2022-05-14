@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth, useLike } from "../../Contexts";
+import { useAuth, useLike, useWatchLater } from "../../Contexts";
 import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
+import { addTotWatchLater, removeFromWatchLater } from "../../utils/watchLater";
 import styles from "./video-card.module.css";
 
 const VideoCard = ({
@@ -22,7 +23,13 @@ const VideoCard = ({
   const {
     authState: { token },
   } = useAuth();
+
+  const {
+    watchLaterState: { watchLater },
+    watchLaterDispatch,
+  } = useWatchLater();
   const navigate = useNavigate();
+
   const checkLikesHandler = likeState.likes.some((video) => video._id === _id);
 
   const likeHandler = (e, _id) => {
@@ -40,14 +47,31 @@ const VideoCard = ({
     }
   };
 
- 
+  const checkWatchLaterHandler = watchLater.some((video) => video._id === _id);
+
+  const watchLaterHandler = (e, _id) => {
+    e.stopPropagation();
+
+    if (token) {
+      const video = videos.find((video) => video._id === _id);
+      if (checkWatchLaterHandler) {
+        removeFromWatchLater(_id, token, watchLaterDispatch);
+      } else {
+        addTotWatchLater(video, token, watchLaterDispatch);
+      }
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
-    <article className={styles.card} >
+    <article className={styles.card}>
       <Link to={`/videoPlay/${_id}`}>
-      <div className={styles.cardImg}>
-        <img src={thumbnail} alt={title} className="responsive-img" />
-        <span>{duration}</span>
-      </div></Link>
+        <div className={styles.cardImg}>
+          <img src={thumbnail} alt={title} className="responsive-img" />
+          <span>{duration}</span>
+        </div>
+      </Link>
       <div className={styles.content}>
         {isVisible && (
           <div className={styles.menu}>
@@ -61,8 +85,15 @@ const VideoCard = ({
               <i className="fa-regular fa-thumbs-up"></i>
               {checkLikesHandler ? "Remove Like" : "Add to Like"}
             </button>
-            <button className="btn btn-primary">
-              <i className="fa-solid fa-clock"></i> Add to Watch Later
+            <button
+              className="btn btn-primary"
+              onClick={(e) => {
+                watchLaterHandler(e, _id);
+                setIsVisible(false);
+              }}
+            >
+              <i className="fa-solid fa-clock"></i>{" "}
+              {checkWatchLaterHandler ? "Remove WatchLater" : "WatchLater"}
             </button>
             <button className="btn btn-primary">
               <i className="fa-solid fa-list-ul"></i> Add to playlist
