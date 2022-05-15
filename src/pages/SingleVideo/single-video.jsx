@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import ReactPlayer from "react-player/youtube";
-import { useNavigate, useParams } from "react-router-dom";
-import { useAuth, useHistory, useLike } from "../../Contexts";
-import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
 import styles from "./single-video.module.css";
+import { useNavigate, useParams } from "react-router-dom";
+import { useAuth, useHistory, useLike, useWatchLater } from "../../Contexts";
+import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
 import { getSingleVideo } from "../../Services";
 import { addToHistory, removeHistory } from "../../utils/history";
+import { addTotWatchLater, removeFromWatchLater } from "../../utils/watchLater";
 const SingleVideo = () => {
   const [singleVideo, setSingleVideo] = useState({});
   const [isVisible, setIsVisible] = useState();
@@ -20,6 +21,10 @@ const SingleVideo = () => {
     likeDispatch,
   } = useLike();
 
+  const {
+    watchLaterState: { watchLater },
+    watchLaterDispatch,
+  } = useWatchLater();
   const {
     historyState: { history },
     historyDispatch,
@@ -59,6 +64,23 @@ const SingleVideo = () => {
       }
     }
   };
+  const checkWatchLaterHandler = watchLater.some(
+    (video) => video._id === singleVideo?._id
+  );
+
+  const watchLaterHandler = (e, _id) => {
+    e.stopPropagation();
+
+    if (token) {
+      if (checkWatchLaterHandler) {
+        removeFromWatchLater(_id, token, watchLaterDispatch);
+      } else {
+        addTotWatchLater(singleVideo, token, watchLaterDispatch);
+      }
+    } else {
+      navigate("/login");
+    }
+  };
 
   return (
     <div className={`body_style ${styles.main_container}`}>
@@ -69,6 +91,7 @@ const SingleVideo = () => {
           height="40rem"
           width="100%"
           onStart={() => historyHandler(singleVideo._id)}
+          playing={true}
         />
         <div className={styles.detail_container}>
           <h4>{singleVideo.title}</h4>
@@ -93,8 +116,12 @@ const SingleVideo = () => {
                 <i className="fa-solid fa-thumbs-up"></i>
                 {checkLikesHandler ? "Unlike" : "Like"}
               </button>
-              <button className={`btn`}>
-                <i className="fa-solid fa-clock"> </i>WatchLater
+              <button
+                className={`btn`}
+                onClick={(e) => watchLaterHandler(e, singleVideo._id)}
+              >
+                <i className="fa-solid fa-clock"> </i>
+                {checkWatchLaterHandler ? "Remove WatchLater" : "WatchLater"}
               </button>
               <button className={`btn`}>
                 <i className="fa-solid fa-list-ul"></i> Playlist
