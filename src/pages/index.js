@@ -4,5 +4,6 @@ export { SignUp } from "./Authentication/signup";
 export { LikePage } from "./Like/like";
 export { HistoryPage } from "./History/history";
 export { WatchLater } from "./WatchLater/watch-later";
-export { Playlist } from "./SinglePlaylist/playlist";
-export { SingleVideo } from "./SingleVideo/single-video"; 
+export { SinglePlaylist } from "./SinglePlaylist/single-playlist";
+export { SingleVideo } from "./SingleVideo/single-video";
+export { Playlist } from "./Playlist/playlist";

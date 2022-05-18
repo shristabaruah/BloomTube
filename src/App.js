@@ -8,6 +8,7 @@ import {
   Login,
   Playlist,
   SignUp,
+  SinglePlaylist,
   SingleVideo,
   WatchLater,
 } from "./pages";
@@ -36,7 +37,7 @@ function App() {
 
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
@@ -71,7 +72,9 @@ function App() {
             </RequiresAuth>
           }
         />
-        <Route path="/videoPlay/:videoId" element={<SingleVideo/>}/>
+        <Route path="/Playlist/:_id" element={<SinglePlaylist />} />
+
+        <Route path="/videoPlay/:videoId" element={<SingleVideo />} />
       </Routes>
     </>
   );

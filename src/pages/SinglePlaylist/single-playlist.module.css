@@ -2,6 +2,19 @@
   display: flex;
   width: calc(100% - 16.8rem);
 }
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  color: var(--color-white);
+}
+
+.empty_img {
+  max-height: 30rem;
+}
 
 @media only screen and (max-width: 1024px) {
   .playlist_container {

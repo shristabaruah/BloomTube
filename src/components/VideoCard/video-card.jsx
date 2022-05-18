@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth, useLike, useWatchLater } from "../../Contexts";
 import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
 import { addTotWatchLater, removeFromWatchLater } from "../../utils/watchLater";
+import { PlaylistModal } from "../PlaylistModal/playlistModal";
 import styles from "./video-card.module.css";
 
 const VideoCard = ({
@@ -17,6 +18,8 @@ const VideoCard = ({
   videos,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [openModel, setOpenModel] = useState(false);
+  const [playlistVideo, setPlaylistVideo] = useState(null);
   const optionsHandler = () => setIsVisible((prev) => !prev);
 
   const { likeState, likeDispatch } = useLike();
@@ -64,8 +67,25 @@ const VideoCard = ({
     }
   };
 
+  const playlistHandler = (e, _id) => {
+    if (token) {
+      setIsVisible(false);
+      setOpenModel(true);
+      const video = videos.find((video) => video._id === _id);
+      setPlaylistVideo(video);
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <article className={styles.card}>
+      {openModel && (
+        <PlaylistModal
+          setOpenModel={setOpenModel}
+          playlistVideo={playlistVideo}
+        />
+      )}
       <Link to={`/videoPlay/${_id}`}>
         <div className={styles.cardImg}>
           <img src={thumbnail} alt={title} className="responsive-img" />
@@ -95,7 +115,10 @@ const VideoCard = ({
               <i className="fa-solid fa-clock"></i>{" "}
               {checkWatchLaterHandler ? "Remove WatchLater" : "WatchLater"}
             </button>
-            <button className="btn btn-primary">
+            <button
+              className="btn btn-primary"
+              onClick={(e) => playlistHandler(e, _id)}
+            >
               <i className="fa-solid fa-list-ul"></i> Add to playlist
             </button>
           </div>

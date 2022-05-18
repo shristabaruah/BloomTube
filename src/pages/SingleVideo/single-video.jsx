@@ -8,9 +8,13 @@ import { addToLikeHandler, removeFromLikesHandler } from "../../utils/like";
 import { getSingleVideo } from "../../Services";
 import { addToHistory, removeHistory } from "../../utils/history";
 import { addTotWatchLater, removeFromWatchLater } from "../../utils/watchLater";
+import { PlaylistModal } from "../../components/PlaylistModal/playlistModal";
+
 const SingleVideo = () => {
   const [singleVideo, setSingleVideo] = useState({});
   const [isVisible, setIsVisible] = useState();
+  const [openModel, setOpenModel] = useState(false);
+  const [playlistVideo, setPlaylistVideo] = useState(null);
 
   const { videoId } = useParams();
 
@@ -82,9 +86,25 @@ const SingleVideo = () => {
     }
   };
 
+  const playlistHandler = (_id) => {
+    if (token) {
+      setIsVisible(false);
+      setOpenModel(true);
+      setPlaylistVideo(singleVideo);
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <div className={`body_style ${styles.main_container}`}>
       <div className={styles.video_wrapper}>
+        {openModel && (
+          <PlaylistModal
+            setOpenModel={setOpenModel}
+            playlistVideo={playlistVideo}
+          />
+        )}
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${singleVideo._id}`}
           controls
@@ -123,7 +143,10 @@ const SingleVideo = () => {
                 <i className="fa-solid fa-clock"> </i>
                 {checkWatchLaterHandler ? "Remove WatchLater" : "WatchLater"}
               </button>
-              <button className={`btn`}>
+              <button
+                className={`btn`}
+                onClick={() => playlistHandler(singleVideo._id)}
+              >
                 <i className="fa-solid fa-list-ul"></i> Playlist
               </button>
             </div>

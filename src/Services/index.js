@@ -12,3 +12,8 @@ export { removeHistoryService } from "./historyServices/removeHistory";
 export { addToWatchLaterService } from "./watchLaterServices/addToWatchLaterServices";
 export { getWatchLaterService } from "./watchLaterServices/getWatchLaterServices";
 export { removeFromWatchLaterService } from "./watchLaterServices/removeFromWatchLater";
+export { removeFromPlaylist } from "./playlistServices/removeFromPlaylistService";
+export { deletePlaylist } from "./playlistServices/deletePlaylistService";
+export { createPlaylist } from "./playlistServices/createPlaylistService";
+export { addToPlaylist } from "./playlistServices/addToPlaylistService";
+export {getPlaylist } from "./playlistServices/getPlaylistService";
