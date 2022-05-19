@@ -3,10 +3,10 @@
   --color-secondary: #051525a2;
   --color-border-hover: #22b2ee;
   --color-blue: #052b77;
-  --color-blue-grey:#5072A7;
-  --color-indigo:#3F00FF;
-  --color-morning-blue:#6050DC;
-  --color-royal-blue:#4169E1;
+  --color-blue-grey: #5072a7;
+  --color-indigo: #3f00ff;
+  --color-morning-blue: #6050dc;
+  --color-royal-blue: #4169e1;
   --color-dark-blue: #1d366d;
   --color-blue-bell: #1f124b;
   --color-text: #7a7a7a;
@@ -39,6 +39,10 @@ body {
     rgba(6, 95, 181, 0.9780287114845938) 100%
   );
   color: var(--color-white);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .body_style {
   margin: 7rem 3rem 3rem 13rem;

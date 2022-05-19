@@ -1,12 +1,26 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useAuth, useHistory, useLike, useWatchLater } from "../../Contexts";
+import {
+  useAuth,
+  useHistory,
+  useLike,
+  usePlaylists,
+  useWatchLater,
+} from "../../Contexts";
 import { removeHistory } from "../../utils/history";
 import { removeFromLikesHandler } from "../../utils/like";
+import { removeFromPlaylistHandler } from "../../utils/playlist";
 import { removeFromWatchLater } from "../../utils/watchLater";
 import styles from "./horizontal-card.module.css";
 
-const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
+const HorizontalCard = ({
+  title,
+  channel,
+  thumbnail,
+  _id,
+  duration,
+  playlist_id,
+}) => {
   const {
     authState: { token },
   } = useAuth();
@@ -23,6 +37,8 @@ const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
 
   const { watchLaterDispatch } = useWatchLater();
 
+  const { playlistDispatch } = usePlaylists();
+
   const removeAction = () => {
     switch (location.pathname) {
       case "/like":
@@ -35,6 +51,7 @@ const HorizontalCard = ({ title, channel, thumbnail, _id, duration }) => {
         removeFromWatchLater(_id, token, watchLaterDispatch);
         break;
       default:
+        removeFromPlaylistHandler(playlist_id, token, _id, playlistDispatch);
         break;
     }
   };
