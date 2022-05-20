@@ -34,7 +34,6 @@ function App() {
       {location.pathname !== "/login" && location.pathname !== "/signup" ? (
         <Sidebar />
       ) : null}
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
