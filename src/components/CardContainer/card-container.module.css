@@ -1,8 +1,6 @@
 .CardContainer {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  padding: 1rem 0;
-  gap: 2.5rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 1rem 2rem;
 }

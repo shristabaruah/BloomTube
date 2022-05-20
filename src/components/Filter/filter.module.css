@@ -1,0 +1,17 @@
+.filter_container {
+  display: flex;
+  top: 5rem;
+  position: absolute;
+  gap: 2rem;
+  padding-left: 3rem;
+  flex-wrap: wrap;
+}
+.filter_container button {
+  background-color: transparent;
+  color: var(--color-white);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 30px;
+  border: 1.5px solid var(--color-border-hover);
+}

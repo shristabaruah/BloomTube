@@ -17,3 +17,4 @@ export { deletePlaylist } from "./playlistServices/deletePlaylistService";
 export { createPlaylist } from "./playlistServices/createPlaylistService";
 export { addToPlaylist } from "./playlistServices/addToPlaylistService";
 export {getPlaylist } from "./playlistServices/getPlaylistService";
+export { getCategories } from "./getCategories";
