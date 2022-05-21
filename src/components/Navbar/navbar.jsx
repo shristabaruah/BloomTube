@@ -33,7 +33,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
         <Link to="/" title="home">
           <div className={styles.brand}>BloomTube</div>
         </Link>
-
+        {location.pathname ===  "/" && (
         <div className={styles.search}>
           <button className={styles.searchIcon}>
             <i className="fas fa-search"></i>
@@ -46,6 +46,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
             onChange={searchInputHandler}
           />
         </div>
+        )}
         <ul className={styles.naviItems}>
           <li>{token ? `Hi ${user.firstName}` : ""}</li>
 

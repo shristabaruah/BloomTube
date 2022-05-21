@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { CardContainer, Filter, Navbar, VideoCard } from "../../components";
+import { CardContainer, Filter, Loader, Navbar, VideoCard } from "../../components";
 import { getVideo } from "../../Services/getVideo";
 import styles from "./home.module.css";
 
@@ -7,9 +7,10 @@ const Home = () => {
   const [videos, setVideo] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
+  const [loading , setLoading ] = useState(true)
 
   useEffect(() => {
-    getVideo(setVideo);
+    getVideo(setVideo , setLoading);
   }, []);
 
   const searchHandler = (videos, searchInput) => {
@@ -45,15 +46,16 @@ const Home = () => {
 
       <div className={`${styles.home}`}>
         <Filter setFilterCategory={setFilterCategory} />
-
         <CardContainer>
-          {searchVideos.length > 0
+          {loading ? (<Loader/>):(
+          searchVideos.length > 0
             ? searchVideos.map((video) => (
                 <li key={video._id}>
                   <VideoCard {...video} videos={videos} />
                 </li>
               ))
-            : null}
+            : <h1>No Videos</h1>
+            )}
         </CardContainer>
       </div>
     </>

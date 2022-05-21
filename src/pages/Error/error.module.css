@@ -1,0 +1,14 @@
+.error_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 3rem 3rem 11rem;
+}
+.error_image {
+  height: 25rem;
+  width: 25rem;
+}
+.text{
+    color: var(--color-white);
+}
