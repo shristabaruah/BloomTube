@@ -23,6 +23,7 @@ const SignUp = () => {
   };
 
   const submitHandler = async (e) => {
+    if (user.firstName && user.email && user.password){
     e.preventDefault();
     try {
       const response = await SignupService(user);
@@ -43,6 +44,9 @@ const SignUp = () => {
       toast.error(error.response.data.errors[0]);
       console.error("error", error);
     }
+  }else{
+    toast.error("Please enter all the fields")
+  }
   };
   return (
     <form className={styles.form}>
