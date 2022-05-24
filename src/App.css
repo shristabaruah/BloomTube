@@ -36,7 +36,7 @@ body {
     176deg,
     rgba(4, 20, 65, 1) 0%,
     rgba(4, 20, 66, 1) 26%,
-    rgba(6, 95, 181, 0.9780287114845938) 100%
+    rgba(6, 95, 181, 0.9) 100%
   );
   color: var(--color-white);
   background-repeat: no-repeat;
@@ -57,5 +57,10 @@ body {
 @media only screen and (max-width: 840px) {
   .body_style {
     margin-left: 11rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .body_style {
+    margin-left:5rem ;
   }
 }
