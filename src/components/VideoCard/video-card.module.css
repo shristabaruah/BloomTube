@@ -91,3 +91,31 @@
   opacity: 1;
   color: var(--color-blue);
 }
+@media only screen and (max-width: 540px) {
+ 
+  .content {
+    max-width: 15rem;
+  }
+  .options {
+    margin-left: 0;
+    font-size: 0.7rem;
+    padding: 1px;
+  }
+  .videoInfo h4 {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    padding:2px 1px ;
+  }
+  .videoInfo h5,
+  .videoInfo span {
+    font-size: 0.7rem;
+    padding-left: 0.5rem;
+  }
+  .videoInfo{
+    margin-left: 3px;
+  }
+  .content img{
+    height: 2rem;
+    height: 2rem;
+  }
+}
