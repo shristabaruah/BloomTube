@@ -17,8 +17,8 @@
 @media only screen and (max-width: 500px) {
 
 .filter_container{
-  width: auto;
   gap:0.5rem;
+  padding-left:0 ;
 }
 .filter_container button{
   font-size: 0.8rem;
