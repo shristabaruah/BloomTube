@@ -10,8 +10,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const guestUser = {
-    email: "user@gmail.com",
-    password: "user123",
+    email: "ShristaBaruah@gmail.com",
+    password: "Sb2022",
   };
 
   const guestUserHandler = (e) => {

@@ -1,7 +1,6 @@
 .filter_container {
   display: flex;
-  top: 5rem;
-  position: absolute;
+  position: relative;
   gap: 2rem;
   padding-left: 3rem;
   flex-wrap: wrap;
@@ -14,4 +13,15 @@
   font-weight: 400;
   border-radius: 30px;
   border: 1.5px solid var(--color-border-hover);
+}
+@media only screen and (max-width: 500px) {
+
+.filter_container{
+  width: auto;
+  gap:0.5rem;
+}
+.filter_container button{
+  font-size: 0.8rem;
+  font-weight: 200;
+}
 }

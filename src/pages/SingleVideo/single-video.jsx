@@ -105,14 +105,16 @@ const SingleVideo = () => {
             playlistVideo={playlistVideo}
           />
         )}
+        <div className={styles.react_player_container}>
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${singleVideo._id}`}
-          controls
-          height="40rem"
+          controls={true}
+          height="100%"
           width="100%"
           onStart={() => historyHandler(singleVideo._id)}
           playing={true}
         />
+        </div>
         <div className={styles.detail_container}>
           <h4>{singleVideo.title}</h4>
           <div className={styles.video_details}>

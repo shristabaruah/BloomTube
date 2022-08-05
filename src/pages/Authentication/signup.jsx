@@ -36,8 +36,6 @@ const SignUp = () => {
           },
         });
         toast.success("Signup Successful !!");
-        localStorage.setItem("token", response.data.encodedToken);
-        localStorage.setItem("user", JSON.stringify(response.data.createdUser));
         navigate("/");
       }
     } catch (error) {

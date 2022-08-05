@@ -8,7 +8,6 @@ const PageInfo = ({ pg, length, video }) => {
           alt="list"
           className="responsive-img"
         />
-        <button className={`btn btn-default ${styles.play}`}>Play</button>
       </div>
       <h3 className={styles.title}>{pg} Videos </h3>
       <div className={styles.descp}>
