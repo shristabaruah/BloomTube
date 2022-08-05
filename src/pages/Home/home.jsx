@@ -38,13 +38,14 @@ const Home = () => {
 
   return (
     <>
+
       <Navbar
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         searchHandler={searchHandler}
       />
-
       <div className={`${styles.home}`}>
+
         <Filter setFilterCategory={setFilterCategory} />
         <CardContainer>
           {loading ? (<Loader/>):(

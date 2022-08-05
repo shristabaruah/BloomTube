@@ -35,10 +35,10 @@ function App() {
       {location.pathname !== "/login" && location.pathname !== "/signup" ? (
         <Sidebar />
       ) : null}
-      <Navbar />
+      {location.pathname !== "/" ? <Navbar /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error/>} />
+        <Route path="*" element={<Error />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
