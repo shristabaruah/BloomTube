@@ -2,8 +2,14 @@
   display: flex;
   position: relative;
   gap: 2rem;
-  padding-left: 3rem;
-  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 3rem;
+  overflow: auto;
+  scrollbar-width: none;
+  transition: width 0.2s ease-in;
+}
+.filter_container::-webkit-scrollbar {
+  display: none;
 }
 .filter_container button {
   background-color: transparent;
@@ -14,14 +20,18 @@
   border-radius: 30px;
   border: 1.5px solid var(--color-border-hover);
 }
-@media only screen and (max-width: 500px) {
-
-.filter_container{
-  gap:0.5rem;
-  padding-left:0 ;
+.filter_container > .active {
+  background-color: var(--color-border-hover);
 }
-.filter_container button{
-  font-size: 0.8rem;
-  font-weight: 200;
-}
+@media only screen and (max-width: 700px) {
+  .filter_container button {
+    font-size: 0.8rem;
+    font-weight: 200;
+    transition: width 0.2s ease-in;
+  }
+  .filter_container {
+    gap: 0.5rem;
+    padding: 0 2rem;
+    transition: width 0.2s ease-in;
+  }
 }

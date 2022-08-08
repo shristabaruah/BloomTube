@@ -87,18 +87,18 @@ const Login = () => {
           Remember me
         </label>
       </div>
-
-      <button className={`btn-link ${styles.btn}`} onClick={guestUserHandler}>
-        Guest LogIn
-      </button>
-      <button
-        className={`btn-link btn ${styles.btn}`}
-        type="submit"
-        onClick={submitHandler}
-      >
-        LogIn
-      </button>
-
+      <div className={styles.btn_container}>
+        <button className={`btn-link ${styles.btn}`} onClick={guestUserHandler}>
+          Guest LogIn
+        </button>
+        <button
+          className={`btn-link btn ${styles.btn}`}
+          type="submit"
+          onClick={submitHandler}
+        >
+          LogIn
+        </button>
+      </div>
       <div className={styles.signup}>
         Dont have an account ?{" "}
         <Link to="/signup">

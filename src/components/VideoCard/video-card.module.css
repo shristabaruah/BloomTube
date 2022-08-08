@@ -23,6 +23,7 @@
   width: 4rem;
   height: 4rem;
   cursor: pointer;
+  object-fit: contain;
 }
 .videoInfo {
   margin-left: 8px;
@@ -73,7 +74,8 @@
 .menu {
   position: absolute;
   display: flex;
-  right: 1.2rem;
+  right: 1.9rem;
+  bottom: -1.5rem;
   flex-direction: column;
   transform-origin: top right;
   transition: transform 0.2s ease-in;
@@ -91,10 +93,12 @@
   opacity: 1;
   color: var(--color-blue);
 }
-@media only screen and (max-width: 540px) {
- 
+@media only screen and (max-width: 860px) {
+ .card{
+  width: 15rem;
+  }
   .content {
-    max-width: 15rem;
+    width: 100%;
   }
   .options {
     margin-left: 0;
@@ -104,18 +108,30 @@
   .videoInfo h4 {
     font-size: 0.9rem;
     margin-left: 0.5rem;
-    padding:2px 1px ;
+    padding: 2px 1px;
   }
   .videoInfo h5,
   .videoInfo span {
     font-size: 0.7rem;
     padding-left: 0.5rem;
   }
-  .videoInfo{
+  .videoInfo {
     margin-left: 3px;
   }
-  .content img{
+  .content img {
     height: 2rem;
     height: 2rem;
   }
+}
+@media only screen and (max-width: 680px) {
+  .card{
+    width: 20rem;
+    padding: 0.8rem;
+  }
+  .options{
+    margin-left: auto;
+  }
+.cardImg span {
+  right: 15px;
+}
 }
