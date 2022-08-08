@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getCategories } from "../../Services";
 import styles from "./filter.module.css";
-const Filter = ({ setFilterCategory }) => {
+const Filter = ({ filterCategory, setFilterCategory }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const Filter = ({ setFilterCategory }) => {
   return (
     <div className={`${styles.filter_container}`}>
       <button
-        className={`btn ${styles.btn_all}`}
+        className={`btn ${filterCategory === "" ? styles.active : ""}`}
         name="category"
         onClick={(e) => setFilterCategory(e.target.value)}
       >
@@ -20,7 +20,9 @@ const Filter = ({ setFilterCategory }) => {
       {categories.map((category) => {
         return (
           <button
-            className={`btn ${styles.btn_filter}`}
+            className={`btn ${
+              category.categoryName === filterCategory ? styles.active : ""
+            }`}
             key={category._id}
             name={category.categoryName}
             onClick={(e) => setFilterCategory(e.target.name)}

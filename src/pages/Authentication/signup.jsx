@@ -14,6 +14,18 @@ const SignUp = () => {
     password: "",
   });
 
+  const guestUser = {
+    firstName: "John",
+    lastName: "Doe",
+    email: "JohnDoe@gmail.com",
+    password: "Jd2022",
+  };
+  const guestHandler = (e) => {
+    e.preventDefault();
+    if (setUser(guestUser)) {
+      submitHandler();
+    }
+  };
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setUser((prevValue) => ({
@@ -23,28 +35,28 @@ const SignUp = () => {
   };
 
   const submitHandler = async (e) => {
-    if (user.firstName && user.email && user.password){
-    e.preventDefault();
-    try {
-      const response = await SignupService(user);
-      if (response.status === 201) {
-        authDispatch({
-          type: "SIGNUP",
-          payload: {
-            token: response.data.encodedToken,
-            user: response.data.createdUser,
-          },
-        });
-        toast.success("Signup Successful !!");
-        navigate("/");
+    if (user.firstName && user.email && user.password) {
+      e.preventDefault();
+      try {
+        const response = await SignupService(user);
+        if (response.status === 201) {
+          authDispatch({
+            type: "SIGNUP",
+            payload: {
+              token: response.data.encodedToken,
+              user: response.data.createdUser,
+            },
+          });
+          toast.success("Signup Successful !!");
+          navigate("/");
+        }
+      } catch (error) {
+        toast.error(error.response.data.errors[0]);
+        console.error("error", error);
       }
-    } catch (error) {
-      toast.error(error.response.data.errors[0]);
-      console.error("error", error);
+    } else {
+      toast.error("Please enter all the fields");
     }
-  }else{
-    toast.error("Please enter all the fields")
-  }
   };
   return (
     <form className={styles.form}>
@@ -109,13 +121,23 @@ const SignUp = () => {
           I accept all terms & conditions
         </label>
       </div>
-      <button
-        className={`btn-link btn ${styles.btn}`}
-        type="submit"
-        onClick={submitHandler}
-      >
-        Sign In
-      </button>
+      <div className={styles.btn_container}>
+        <button
+          className={`btn-link btn ${styles.btn}`}
+          type="submit"
+          onClick={guestHandler}
+        >
+          Dummy SignUp
+        </button>
+
+        <button
+          className={`btn-link btn ${styles.btn}`}
+          type="submit"
+          onClick={submitHandler}
+        >
+          Sign Up
+        </button>
+      </div>
       <div className={styles.signup}>
         Already have an account ?{" "}
         <Link to="/login">

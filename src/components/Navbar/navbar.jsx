@@ -4,7 +4,7 @@ import { useAuth } from "../../Contexts";
 import { toast } from "react-toastify";
 const Navbar = ({ searchInput, setSearchInput }) => {
   const {
-    authState: { token, user },
+    authState: { token},
     authDispatch,
   } = useAuth();
 
@@ -48,7 +48,6 @@ const Navbar = ({ searchInput, setSearchInput }) => {
         </div>
         )}
         <ul className={styles.naviItems}>
-          <li>{token ? `Hi ${user.firstName}` : ""}</li>
 
           <li>
             <button
